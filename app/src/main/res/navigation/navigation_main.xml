@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/homeFragmet">
+
+    <fragment
+        android:id="@+id/homeFragmet"
+        android:name="com.main.myapplication.screens.HomeFragmet"
+        android:label="fragment_home_fragmet"
+        tools:layout="@layout/fragment_home_fragmet" >
+        <action
+            android:id="@+id/action_homeFragmet_to_balanceFragment"
+            app:destination="@id/balanceFragment" />
+        <action
+            android:id="@+id/action_homeFragmet_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragmet_to_transactionActivity"
+            app:destination="@id/transactionActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/balanceFragment"
+        android:name="com.main.myapplication.screens.BalanceFragment"
+        android:label="fragment_balance"
+        tools:layout="@layout/fragment_balance" />
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.main.myapplication.screens.HistoryFragment"
+        android:label="fragment_history"
+        tools:layout="@layout/fragment_history" />
+    <activity
+        android:id="@+id/transactionActivity"
+        android:name="com.main.myapplication.TransactionActivity"
+        android:label="activity_transaction"
+        tools:layout="@layout/activity_transaction" />
+</navigation>
